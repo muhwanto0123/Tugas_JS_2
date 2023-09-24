@@ -14,3 +14,5 @@ const fruits_3 = ['apple', 'banana', 'cherry']
 fruits_3.splice(0, 0, 'mango') 
 // menambah 1 item di index 0 
 console.log(fruits_3) // [ 'mango', 'apple', 'banana', 'cherry' ]
+
+// Metode splice() bisa digunakan untuk menambahkan, menghapus, atau mereplace item ke atau dari sebuah array.
