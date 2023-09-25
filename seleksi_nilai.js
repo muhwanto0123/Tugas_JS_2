@@ -1,4 +1,4 @@
-function filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, callback) {
+const filterAndSortData = (nilaiAwal, nilaiAkhir, dataArray, callback) => {
     // Validasi nilaiAwal < nilaiAkhir dan jumlah data dalam dataArray > 5
     if (nilaiAwal >= nilaiAkhir || dataArray.length <= 5) {
       console.log("Validasi gagal. Pastikan nilaiAwal < nilaiAkhir dan jumlah data dalam dataArray > 5.");
@@ -16,24 +16,24 @@ function filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, callback) {
     console.log(sortedData);
   }
   
-  // Callback function untuk mengurutkan data secara ascending
-  function ascendingSort(data) {
-    return data.sort((a, b) => a - b);
-  }
+// Callback function untuk mengurutkan data secara ascending
+const ascendingSort = (data) => {
+  return data.sort((awal, akhir) => awal - akhir);
+}
   
-  // Callback function untuk mengurutkan data secara descending
-  function descendingSort(data) {
-    return data.sort((a, b) => b - a);
-  }
+// Callback function untuk mengurutkan data secara descending
+const descendingSort = (data) => {
+  return data.sort((awal, akhir) => awal - akhir);
+}
   
-  // Contoh pemanggilan fungsi dengan callback function
-  const dataArray = [3, 8, 2, 10, 5, 7, 1, 9, 6, 4];
-  const nilaiAwal = 3;
-  const nilaiAkhir = 7;
+// Contoh pemanggilan fungsi dengan callback function
+const dataArray = [3, 8, 2, 10, 5, 7, 1, 9, 6, 4];
+const nilaiAwal = 3;
+const nilaiAkhir = 7;
   
-  console.log("Hasil sorting ascending:");
-  filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, ascendingSort);
-  
-  console.log("Hasil sorting descending:");
-  filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, descendingSort);
+console.log("Hasil sorting ascending:");
+filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, ascendingSort);
+
+console.log("Hasil sorting descending:");
+filterAndSortData(nilaiAwal, nilaiAkhir, dataArray, descendingSort);
   
